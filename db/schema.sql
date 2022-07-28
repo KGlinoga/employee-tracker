@@ -4,12 +4,12 @@ CREATE DATABASE business_db;
 USE business_db;
 
 CREATE TABLE depts (
-    id INT NOT NULL,
+    id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
     dept_name VARCHAR(30) NOT NULL
 );
 
 CREATE TABLE roles (
-    id INT,
+    id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
     title VARCHAR(30) NOT NULL,
     salary DECIMAL,
     dept_id INT,
@@ -19,13 +19,14 @@ CREATE TABLE roles (
 );
 
 CREATE TABLE employees (
-    id INT,
+    id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
     first_name VARCHAR(30),
     last_name VARCHAR(30),
     role_id INT,
     manager_id INT,
     FOREIGN KEY (role_id)
     REFERENCES roles(id)
-    ON DELETE SET NULL,
+    ON DELETE SET NULL
     -- need self-referential KEY here (so the manager_id row here refs the id row here)
+    -- also we have in the class repo vsc we ahve the README For this challenge, schema.sql from folder 15, server.js from folder 11 connect node, and index.js from wk5 folder 19 INquirer demo and schema.sql form Foreign Primary Key 
 );
