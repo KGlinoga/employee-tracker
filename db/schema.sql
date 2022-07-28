@@ -30,3 +30,13 @@ CREATE TABLE employees (
     -- need self-referential KEY here (so the manager_id row here refs the id row here)
     -- also we have in the class repo vsc we ahve the README For this challenge, schema.sql from folder 15, server.js from folder 11 connect node, and index.js from wk5 folder 19 INquirer demo and schema.sql form Foreign Primary Key 
 );
+
+-- DESCRIBE depts;
+-- DESCRIBE roles;
+-- DESCRIBE employees;
+
+SOURCE seeds.sql;
+
+-- SELECT * FROM depts;
+-- SELECT * FROM roles;
+-- SELECT * FROM employees;
