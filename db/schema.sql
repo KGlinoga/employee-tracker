@@ -33,6 +33,7 @@ ALTER TABLE employees
    ADD CONSTRAINT sr_fk_emp_man 
    FOREIGN KEY (manager_id)
    REFERENCES employees(id)
+   ON UPDATE CASCADE
 ;
 
 -- DESCRIBE depts;
