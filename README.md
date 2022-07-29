@@ -24,7 +24,7 @@
   ## Usage
   
   With Employee Tracker you can do tons of organizational tasks.  Keep track of all your employees, departments and roles.  You can also add to each of these categories.  Each table displays a variety of information for each category, including ID numbers, salaries, and management structure. 
-  
+ 
   Terminal Start: 
   ![Terminal start](https://user-images.githubusercontent.com/28368622/181688022-e0a3a195-e673-45bf-9413-7fa1b266ef48.png)
 
