@@ -111,6 +111,42 @@ function startMgr() {
                         console.table('\n', results)}
                     )})
             })
+        } else if(answers.firstChoice=== "Add an employee"){
+            inquirer.prompt([
+                {
+                    type:'input',
+                    message: "First Name:",
+                    name: 'firstName'
+                },
+                {
+                    type:'input',
+                    message: "Last Name:",
+                    name: 'lastName'
+                },
+                {
+                    type:'input',
+                    message: "Role ID:",
+                    name: 'empRoleID'
+                },
+                {
+                    type:'input',
+                    message: "Manager ID:",
+                    name: 'manID'
+                },
+            ])
+            .then(ans=>{
+                console.log(ans)
+                db.query('INSERT INTO employees(first_name, last_name, role_id, manager_id) VALUES(?, ?, ?, ?)', 
+                [ans.firstName, ans.lastName, ans.empRoleID, ans.manID], 
+                (err,results)=>{
+                    if(err)
+                        throw err
+                    db.query('SELECT * FROM employees', (err,results)=>{
+                        if(err)
+                            throw err
+                        console.table('\n', results)}
+                    )})
+            })
         }
     })
 }
