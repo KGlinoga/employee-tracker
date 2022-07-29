@@ -25,9 +25,9 @@ const db = mysql.createConnection(
 );
 
 // query database placeholder for initial code build
-db.query('SELECT * FROM depts', function (err, results){
-    console.log(results);
-});
+// db.query('SELECT * FROM depts', function (err, results){
+//     console.log(results);
+// });
 
 // default responst for other requests
 app.use((req,res) => {
@@ -39,4 +39,17 @@ app.listen(PORT, () => {
 });
 
 // start inquirer
+// display/ask questions 
 
+function startMgr() {
+    inquirer.prompt([
+        {
+            type: "list",
+            name: "firstChoice",
+            message: "What would you like to manage?",
+            choices: ["View all departments","View all roles", "View all employees", "Add a department", "Add a role", "Add an employee"]
+        }
+    ])
+};
+
+startMgr();
