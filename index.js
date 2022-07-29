@@ -82,6 +82,35 @@ function startMgr() {
                         console.table('\n', results)}
                     )})
             })
+        } else if(answers.firstChoice=== "Add a role"){
+            inquirer.prompt([
+                {
+                    type:'input',
+                    message: "Title:",
+                    name: 'roleTitle'
+                },
+                {
+                    type:'input',
+                    message: "Salary:",
+                    name: 'roleSalary'
+                },
+                {
+                    type:'input',
+                    message: "Department ID(#):",
+                    name: 'roleID'
+                },
+            ])
+            .then(ans=>{
+                console.log(ans)
+                db.query('INSERT INTO roles(title, salary, dept_id) VALUES(?, ?, ?)', [ans.roleTitle, ans.roleSalary, ans.roleID], (err,results)=>{
+                    if(err)
+                        throw err
+                    db.query('SELECT * FROM roles', (err,results)=>{
+                        if(err)
+                            throw err
+                        console.table('\n', results)}
+                    )})
+            })
         }
     })
 }
