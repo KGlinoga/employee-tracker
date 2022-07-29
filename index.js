@@ -65,11 +65,6 @@ function startMgr() {
             });
         } else if(answers.firstChoice=== "Add a department"){
             inquirer.prompt([
-                // {
-                //     type:'input',
-                //     message: "Department ID:",
-                //     name: 'deptID'
-                // },
                 {
                     type:'input',
                     message: "Department Name:",
@@ -78,7 +73,7 @@ function startMgr() {
             ])
             .then(ans=>{
                 console.log(ans)
-                db.query('INSERT INTO depts(dept_name) VALUES(dept_name)', ans.deptName, (err,results)=>{
+                db.query('INSERT INTO depts(dept_name) VALUES(?)', [ans.deptName], (err,results)=>{
                     if(err)
                         throw err
                     db.query('SELECT * FROM depts', (err,results)=>{
