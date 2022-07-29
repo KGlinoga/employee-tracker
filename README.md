@@ -1,10 +1,10 @@
-# Note Taker App
+# Employee Tracker
   
   
 
   ## Description
   
-  This app was meant to demonstrate working knowledge of Express.js . \n It  allows a user to type in , title and save notes for future purposes.  Users can also delete notes as needed.  
+  This app is meant to help busy professionals better manage their personnel.  It uses a CLI to manage a database of tables regarding employees, roles and departments.    
 
   ## Table of Contents
   
@@ -17,11 +17,11 @@
 
   ## Installation
   
-  There are no installation steps required to use Note Taker App!  Simply enter the URL to your browser and type and save your first note!  Revisit the notes later by clicking on the list on the left, and delete them whenever you're ready. 
+  In order to use this app, please make sure you have the following packages installed and enabled via your Terminal: Express.js v16, Inquirer v8, MySQL2, and console.table.  
   
   ## Usage
   
-  See above.  Screenshots to come!
+  With Employee Tracker you can do tons of organizational tasks.  Keep track of all your employees, departments and roles.  You can also add to each of these categories.  Each table displays a variety of information for each category, including ID numbers, salaries, and management structure. 
   
   ## Licenses: 
   
@@ -29,18 +29,18 @@
   
   ## Contributing:
   
-  None please.
+  Feel free to reach out to me via GitHub or Email.
   
   ## Testing: 
   
-  None please.
+  None.
   
   ## Questions:
   
-  Please reach out via either GitHub or email.
+  Feel free to reach out to me via GitHub or Email.
 
   Find me, kglinoga, this code and more on GitHub: <https://github.com/kglinoga>
 
   Email me any questions at <kglinoga@gmail.com>
 
-  Please reach out via either GitHub or email.
+  Feel free to reach out to me via GitHub or Email.
