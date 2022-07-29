@@ -50,6 +50,9 @@ function startMgr() {
             choices: ["View all departments","View all roles", "View all employees", "Add a department", "Add a role", "Add an employee"]
         }
     ])
+    .then((answers) => {
+        console.log(answers);
+    })
 };
 
 startMgr();
