@@ -47,7 +47,14 @@ function startMgr() {
             type: "list",
             name: "firstChoice",
             message: "What would you like to manage?",
-            choices: ["View all departments","View all roles", "View all employees", "Add a department", "Add a role", "Add an employee"]
+            choices: [
+                "View all departments",
+                "View all roles", 
+                "View all employees", 
+                "Add a department", 
+                "Add a role", 
+                "Add an employee"
+            ]
         }
     ])
     .then((answers) => {
@@ -102,7 +109,12 @@ function startMgr() {
             ])
             .then(ans=>{
                 console.log(ans)
-                db.query('INSERT INTO roles(title, salary, dept_id) VALUES(?, ?, ?)', [ans.roleTitle, ans.roleSalary, ans.roleID], (err,results)=>{
+                db.query('INSERT INTO roles(title, salary, dept_id) VALUES(?, ?, ?)', [
+                    ans.roleTitle, 
+                    ans.roleSalary, 
+                    ans.roleID
+                ], 
+                (err,results)=>{
                     if(err)
                         throw err
                     db.query('SELECT * FROM roles', (err,results)=>{
@@ -137,7 +149,12 @@ function startMgr() {
             .then(ans=>{
                 console.log(ans)
                 db.query('INSERT INTO employees(first_name, last_name, role_id, manager_id) VALUES(?, ?, ?, ?)', 
-                [ans.firstName, ans.lastName, ans.empRoleID, ans.manID], 
+                [
+                    ans.firstName, 
+                    ans.lastName, 
+                    ans.empRoleID, 
+                    ans.manID
+                ], 
                 (err,results)=>{
                     if(err)
                         throw err

@@ -26,15 +26,10 @@ CREATE TABLE employees (
     manager_id INT,
     FOREIGN KEY (role_id)
     REFERENCES roles(id)
+    FOREIGN KEY (manager_id)
+    REFERENCES employees(id)
     ON DELETE SET NULL
 );
-
-ALTER TABLE employees
-   ADD CONSTRAINT sr_fk_emp_man 
-   FOREIGN KEY (manager_id)
-   REFERENCES employees(id)
-   ON UPDATE CASCADE
-;
 
 -- DESCRIBE depts;
 -- DESCRIBE roles;
