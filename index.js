@@ -55,6 +55,14 @@ function startMgr() {
             db.query('SELECT * FROM depts', function (err, results){
             console.table(results);
             });
+        } else if(answers.firstChoice=== "View all roles"){
+            db.query('SELECT * FROM roles', function (err, results){
+            console.table(results);
+            });
+        } else if(answers.firstChoice=== "View all employees"){
+            db.query('SELECT * FROM employees', function (err, results){
+            console.table(results);
+            });
         }
     })
 };
