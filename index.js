@@ -51,7 +51,11 @@ function startMgr() {
         }
     ])
     .then((answers) => {
-        console.log(answers);
+        if(answers.firstChoice=== "View all departments"){
+            db.query('SELECT * FROM depts', function (err, results){
+            console.table(results);
+            });
+        }
     })
 };
 
