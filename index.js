@@ -24,11 +24,6 @@ const db = mysql.createConnection(
     console.log(`Connected to the business_db database.`)
 );
 
-// query database placeholder for initial code build
-// db.query('SELECT * FROM depts', function (err, results){
-//     console.log(results);
-// });
-
 // default responst for other requests
 app.use((req,res) => {
     res.status(404).end();
