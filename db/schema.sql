@@ -35,8 +35,8 @@ CREATE TABLE employees (
 -- DESCRIBE roles;
 -- DESCRIBE employees;
 
-SOURCE seeds.sql;
+-- SOURCE seeds.sql;
 
 -- SELECT * FROM depts;
 -- SELECT * FROM roles;
-SELECT * FROM employees;
+-- SELECT * FROM employees;
