@@ -46,6 +46,9 @@ Adding a Department:
 Department Added: 
 ![Dept Added](https://user-images.githubusercontent.com/28368622/181688124-27b7a039-c56f-4e47-8e91-890299fd87e5.png)
 
+  ## Credits: 
+  
+  Huge thanks to cohort members Kristen Santee (https://github.com/kristensantee) and Lindsay Lewis (https://github.com/lindslewis) for their input on this project!  
   
   ## Licenses: 
   
